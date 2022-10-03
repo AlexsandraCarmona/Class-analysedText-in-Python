@@ -1,0 +1,38 @@
+class analysedText(object):
+    
+    def __init__ (self, text):
+
+        # TODO: Remove the punctuation from <text> and make it lower case.
+        Construc_Text = text.replace('.','')
+        Construc_Text = Construc_Text.replace('!','')
+        Construc_Text = Construc_Text.replace(',','')
+        Construc_Text = Construc_Text.replace('?','')
+        Construc_Text = Construc_Text.lower()
+        
+        # TODO: Assign the formatted text to a new attribute called "fmtText"
+        self.fmtText=Construc_Text
+    
+    def freqAll(self):        
+        # TODO: Split the text into a list of words  
+        Split_List = self.fmtText.split(' ')
+        
+        # TODO: Create a dictionary with the unique words in the text as keys
+        Split_Set = set(Split_List) #remove duplicates
+        
+        # Create dictionary
+        freqMap = {}
+        for word in set(Split_Set): # use set to remove duplicates in list
+            freqMap[word] = Split_List.count(word)
+        
+        return freqMap
+    
+    def freqOf(self, word):
+
+        # TODO: return the number of occurrences of <word> in <fmtText>
+        New_Dict = self.freqAll()
+        
+        if word in New_Dict:
+            return New_Dict[word]
+        else:
+            return 0
+        
