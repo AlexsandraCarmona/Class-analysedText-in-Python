@@ -1,6 +1,7 @@
 # Class-analysedText-in-Python
 This is a class in Python created as an assignment of the "Python for Data Science, AI and Development" IBM course in Cousera.
 The class 'analysedText' has the following methods:
+
 1 - Constructor (__init__) - This method should take the argument text, make it lower case, and remove all punctuation. 
     It is assumed that only the following punctuation is used: period (.), exclamation mark (!), comma (,) and question mark (?). 
     This newly formatted text is assigned to a new attribute called fmtText.
